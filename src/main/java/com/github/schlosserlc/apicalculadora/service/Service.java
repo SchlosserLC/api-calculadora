@@ -25,4 +25,18 @@ public class Service {
         }
         return total;
     }
+
+    public static Integer multiplica(Integer val1, Integer val2, Integer val3) {
+        logger.info("chamou o serviço de multiplicar");
+        return val1 * val2 * val3;
+    }
+
+    public static Integer multiplicarTudo(Entrada entrada) {
+        logger.info("chamou o serviço multiplicar tudo");
+        Integer total = 1;
+        for (Integer numero : entrada.getNumeros()) {
+            total = total * numero;
+        }
+        return total;
+    }
 }

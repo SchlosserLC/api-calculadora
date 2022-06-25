@@ -28,6 +28,8 @@ class ApiCalculadoraApplicationTests {
 				Service.somaTudo(Entrada.builder()
 						.numeros(numeros)
 						.build()));
+
+		Assertions.assertEquals(125, Service.multiplica(5, 5, 5));
 	}
 
 }

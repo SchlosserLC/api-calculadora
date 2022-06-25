@@ -24,6 +24,15 @@ public class Controller {
         return Service.somaTudo(numeros);
     }
 
+    @RequestMapping(value = "multiplica/{value1}/{value2}/{value3}/", method = RequestMethod.GET)
+    public Integer multiplica(@PathVariable Integer value1,@PathVariable Integer value2, @PathVariable Integer value3) {
+        logger.info("chamou o controlador multiplica");
+        return Service.multiplica(value1, value2, value3);
+    }
 
-
+    @RequestMapping(value = "multiplica/todos/", method = RequestMethod.POST)
+    public Integer multiplicarTudo(@RequestBody Entrada numeros) {
+        logger.info("chamou o controlador multiplicaTodos");
+        return Service.multiplicarTudo(numeros);
+    }
 }
