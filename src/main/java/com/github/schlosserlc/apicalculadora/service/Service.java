@@ -4,6 +4,7 @@ import com.github.schlosserlc.apicalculadora.controller.Controller;
 import com.github.schlosserlc.apicalculadora.dto.Entrada;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.Optional;
 
@@ -11,11 +12,6 @@ import java.util.Optional;
 public class Service {
 
     private static final Logger logger = LoggerFactory.getLogger(Controller.class);
-
-    public static Integer somaValores(Integer val1, Integer val2) {
-        logger.info("chamou o serviço");
-        return val1 + val2;
-    }
 
     public static Integer somaTudo(Entrada entrada) {
         logger.info("chamou o serviço soma tudo");
@@ -26,11 +22,6 @@ public class Service {
         return total;
     }
 
-    public static Integer multiplica(Integer val1, Integer val2, Integer val3) {
-        logger.info("chamou o serviço de multiplicar");
-        return val1 * val2 * val3;
-    }
-
     public static Integer multiplicarTudo(Entrada entrada) {
         logger.info("chamou o serviço multiplicar tudo");
         Integer total = 1;
@@ -39,4 +30,5 @@ public class Service {
         }
         return total;
     }
+
 }

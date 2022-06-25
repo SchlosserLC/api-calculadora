@@ -11,6 +11,9 @@ import java.util.List;
 @NoArgsConstructor
 public class Entrada {
 
+    public static String TIPO_SOMAR = "somar";
+    public static String TIPO_MULTIPLICAR = "multiplicar";
+
     private List<Integer> numeros;
 
 }
